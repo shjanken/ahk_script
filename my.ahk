@@ -44,4 +44,8 @@ Capslock::Ctrl
 ;; sql 的自动补完
 
 ;; 
-:::selectsfqr::select * from sfqr where hpzl='02' and hphm='
+:::ssfqr::select * from sfqr where hpzl='02' and hphm='
+:::scyd::select yw,djyw,pzyw,yxsj,newjg,cyh,dhyw from cyd where hpzl='02' and hphm='
+
+;; execute fsl.py
+::py fsl::python c:\Users\shjanken\workspace\fsl-client\python\fsl.py --url http://10.0.0.102:3010 --action=changeyw -c 
