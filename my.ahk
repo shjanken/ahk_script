@@ -41,14 +41,7 @@ Capslock::Ctrl
 ::/s56::ssh root@192.168.56.
 ::/s56o::ssh oracle@192.168.56.
 
-+^s::Run "C:\Program Files\oracle\sqldeveloper\sqldeveloper.exe"
+;; sql 的自动补完
 
-;;if WinNotExist ahk_class SunAwtFrame {
-;;
-;;  WinActivate
-;;}else if WinNotActive ahk_class SunAwtFrame {
-;;  WinActivate
-;;}else {
-;;  WinMinimize
-;;}
-;;Return
+;; 
+:::selectsfqr::select * from sfqr where hpzl='02' and hphm='
