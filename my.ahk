@@ -1,10 +1,9 @@
-﻿; !=atl #=win ^=ctl +=shift
-
-;; express for run software
-!n::run notepad
-!s::run xshell
-;; !f::run firefox
-!c::run, C:\Program Files\cmder\Cmder.exe
+﻿; !=atl #=win ^=ctl +=shift 
+;; express for run software 
+!n::run notepad 
+;;; !s::run xshell
+;;; !f::run firefox
+;;; !c::run, C:\Program Files\cmder\Cmder.exe
 ;; !a::run Atom
 
 ;; 绑定快捷键
@@ -14,17 +13,22 @@
 ~LButton & RButton::AltTab
 
 ;; vim 方向键绑定
-!j::Send, {down}
-!k::Send, {up}
-!h::Send, {left}
-!l::Send, {right}
+;;; !k::Send, {up}
+;;; !h::Send, {left}
+;;; !l::Send, {right}
+^f::Send, {right}
+^b::Send, {left}
+^p::Send, {up}
+^n::Send, {down}
 
 ;; 绑定 backspace
-
 !f::Send, {backspace}
 
 ;将 caps 键换成 ctl 键
 Capslock::Ctrl
+
+;; 将窗口保持在最前
+!t:: Winset, Alwaysontop, , A
 
 ;; shotcut
 :::janh::janken.wang@hotmail.com
@@ -42,10 +46,8 @@ Capslock::Ctrl
 ::/s56o::ssh oracle@192.168.56.
 
 ;; sql 的自动补完
-
-;; 
 :::ssfqr::select * from sfqr where hpzl='02' and hphm='
 :::scyd::select yw,djyw,pzyw,yxsj,newjg,cyh,dhyw from cyd where hpzl='02' and hphm='
 
 ;; execute fsl.py
-::py fsl::python c:\Users\shjanken\workspace\fsl-client\python\fsl.py --url http://10.0.0.102:3010 --action=changeyw -c 
+::py fsl::python c:\Users\janke\workspace\fsl-client\python\fsl.py --url http://10.0.0.102:3010 --action=changeyw -c
