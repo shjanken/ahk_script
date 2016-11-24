@@ -16,10 +16,6 @@
 ;;; !k::Send, {up}
 ;;; !h::Send, {left}
 ;;; !l::Send, {right}
-^f::Send, {right}
-^b::Send, {left}
-^p::Send, {up}
-^n::Send, {down}
 
 ;; 绑定 backspace
 !f::Send, {backspace}
