@@ -4,18 +4,26 @@
 ;;; !s::run xshell
 ;;; !f::run firefox
 ;;; !c::run, C:\Program Files\cmder\Cmder.exe
-;; !a::run Atom
+;;; !a::run Atom
 
 ;; 绑定快捷键
 !q::Send, !{F4}
 
-;; 鼠标左右键快速 alt+tab
-~LButton & RButton::AltTab
+
+~LButton & RButton::AltTab ;; 鼠标左右键快速 alt+tab
+;;MButton::Send, !{F4} ;; 鼠标中键关闭窗口
+MButton::
+{
+  Send, {LButton}
+  sleep, 500
+  Send, !{F4}
+} ;; 鼠标中键关闭窗口，在此之前先左键选中窗口
 
 ;; vim 方向键绑定
-;;; !k::Send, {up}
-;;; !h::Send, {left}
-;;; !l::Send, {right}
+!k::Send, {up}
+!j::Send, {down}
+!h::Send, {left}
+!l::Send, {right}
 
 ;; 绑定 backspace
 !f::Send, {backspace}
@@ -26,7 +34,7 @@ Capslock::Ctrl
 ;; 将窗口保持在最前
 !t:: Winset, Alwaysontop, , A
 
-;; shotcut
+;; shotcutLButton
 :::janh::janken.wang@hotmail.com
 :::jang::janken.wang@gmail.com
 :::mag::magnet:?xt=urn:btih:
@@ -42,8 +50,8 @@ Capslock::Ctrl
 ::/s56o::ssh oracle@192.168.56.
 
 ;; sql 的自动补完
-:::ssfqr::select * from sfqr where hpzl='02' and hphm='
-:::scyd::select yw,djyw,pzyw,yxsj,newjg,cyh,dhyw from cyd where hpzl='02' and hphm='
+::select sfqr::select * from sfqr where hpzl='02' and hphm='
+::select cyd::select yw,djyw,pzyw,yxsj,newjg,cyh,dhyw from cyd where hpzl='02' and hphm='
 
 ;; execute fsl.py
 ::py fsl::python c:\Users\janke\workspace\fsl-client\python\fsl.py --url http://10.0.0.102:3010 --action=changeyw -c
