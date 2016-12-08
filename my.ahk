@@ -9,12 +9,11 @@
 ;; 绑定快捷键
 !q::Send, !{F4}
 
-
 ~LButton & RButton::AltTab ;; 鼠标左右键快速 alt+tab
 ;;MButton::Send, !{F4} ;; 鼠标中键关闭窗口
 MButton::
 {
-  Send, {LButton}
+  Send, {~LButton}
   sleep, 500
   Send, !{F4}
 } ;; 鼠标中键关闭窗口，在此之前先左键选中窗口
