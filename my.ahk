@@ -1,4 +1,5 @@
 ﻿; !=atl #=win ^=ctl +=shift 
+
 ;; express for run software 
 !n::run notepad 
 ;;; !s::run xshell
@@ -6,17 +7,35 @@
 ;;; !c::run, C:\Program Files\cmder\Cmder.exe
 ;;; !a::run Atom
 
+^!p::run, C:\Users\janke\AppData\Local\PomoDoneApp\PomoDoneApp.exe
+
+;; if emacs window exists
+;; active emacs
+;; else run emacs
+^!e::
+    IfWinExist, emacs@shjanken-worker
+    {
+        WinActivate
+    }
+    Else
+    {
+        Run emacs
+        WinWait, emacs@shjanken-worker
+        WinActivate
+    }
+
+
 ;; 绑定快捷键
 !q::Send, !{F4}
 
 ~LButton & RButton::AltTab ;; 鼠标左右键快速 alt+tab
 ;;MButton::Send, !{F4} ;; 鼠标中键关闭窗口
-MButton::
-{
-  Send, {~LButton}
-  sleep, 500
-  Send, !{F4}
-} ;; 鼠标中键关闭窗口，在此之前先左键选中窗口
+;;MButton::
+;;{
+;;  Send, {~LButton}
+;;  sleep, 500
+;;  Send, !{F4}
+;;} ;; 鼠标中键关闭窗口，在此之前先左键选中窗口
 
 ;; vim 方向键绑定
 !k::Send, {up}
@@ -31,9 +50,7 @@ MButton::
 Capslock::Ctrl
 
 ;; 将窗口保持在最前
-!t:: Winset, Alwaysontop, , A
-
-;; shotcutLButton
+!t:: Winset, Alwaysontop, , A ;; shotcutLButton 
 :::janh::janken.wang@hotmail.com
 :::jang::janken.wang@gmail.com
 :::mag::magnet:?xt=urn:btih:
