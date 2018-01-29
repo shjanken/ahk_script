@@ -13,16 +13,27 @@
 ;; active emacs
 ;; else run emacs
 ^!e::
-    IfWinExist, emacs@shjanken-worker
-    {
-        WinActivate
-    }
-    Else
-    {
-        Run emacs
-        WinWait, emacs@shjanken-worker
-        WinActivate
-    }
+IfWinExist, emacs@shjanken-worker
+{
+    WinActivate
+}
+Else
+{
+    Run emacs
+    WinWait, emacs@shjanken-worker
+    WinActivate
+}
+return
+
+;;; start or show todoist
+;;; and send q keystork to the app
+!^t::
+Run, d:\app\todoist
+WinWait Todoist: To-Do List and Task Manager
+WinActivate
+sleep 1000
+send q
+return
 
 
 ;; 绑定快捷键
