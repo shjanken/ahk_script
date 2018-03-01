@@ -7,7 +7,13 @@
 ;;; !c::run, C:\Program Files\cmder\Cmder.exe
 ;;; !a::run Atom
 
-^!p::run, C:\Users\janke\AppData\Local\PomoDoneApp\PomoDoneApp.exe
+^!p::
+run, C:\Users\janke\AppData\Local\PomoDoneApp\PomoDoneApp.exe
+winwait PomoDoneApp
+WinActivate
+sleep 1000
+send ^r ; 让 pomodone 启动的时候自动刷新
+return
 
 ;; if emacs window exists
 ;; active emacs
