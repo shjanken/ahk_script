@@ -88,3 +88,5 @@ Capslock::Ctrl
 
 ;; execute fsl.py
 ::py fsl::python c:\Users\janke\workspace\fsl-client\python\fsl.py --url http://10.0.0.102:3010 --action=changeyw -c
+
+#include mouse.ahk
