@@ -12,8 +12,8 @@ Return
 KeyWinC:
 if winc_presses = 1 
 {
-    Send, +{Space} ; if just one keypress, send shift + space
- to launch keyprinha
+    ; if just one keypress, send shift + space to launch keyprinha
+    Send, +{Space} 
 }
 else if winc_presses = 2 
 {
