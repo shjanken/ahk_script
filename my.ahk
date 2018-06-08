@@ -86,6 +86,10 @@ Capslock::Ctrl
 ::py fsl::python c:\Users\janke\workspace\fsl-client\python\fsl.py --url http://10.0.0.102:3010 --action=changeyw -c
 return
 
+;; beacuse the 'j' key is broken in my sunsang computer.
+;; so I map the alt+g to j
+!G::send, j
+
 #Include keypirinha.ahk
 #Include mouse.ahk
 return
