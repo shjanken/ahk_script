@@ -8,11 +8,7 @@
 ;;; !a::run Atom
 
 ^!p::
-run, C:\Users\janke\AppData\Local\PomoDoneApp\PomoDoneApp.exe
-winwait PomoDoneApp
-WinActivate
-sleep 1000
-send ^r ; 让 pomodone 启动的时候自动刷新
+run, C:\Users\janke\AppData\Local\TogglDesktop\TogglDesktop.exe
 return
 
 ;; if emacs window exists
@@ -68,8 +64,8 @@ Capslock::Ctrl
 
 ;; 将窗口保持在最前
 !t:: Winset, Alwaysontop, , A ;; shotcutLButton 
-:::janh::janken.wang@hotmail.com
-:::jang::janken.wang@gmail.com
+:*::janh::janken.wang@hotmail.com
+:*::jang::janken.wang@gmail.com
 :::mag::magnet:?xt=urn:btih:
 
 ::/s203::ssh root@10.0.0.203 ;;root用户登录203
