@@ -90,6 +90,6 @@ return
 ;; so I map the alt+g to j
 !G::send, j
 
-#Include keypirinha.ahk
+;; #Include keypirinha.ahk
 #Include mouse.ahk
 return
